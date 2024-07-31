@@ -54,12 +54,7 @@ pipeline {
             }
         }
 
-        stage('Trigger ManifestUpdate') {
-            steps {
-                echo "Triggering updatemanifestjob"
-                catchError(buildResult: 'FAILURE', stageResult: 'FAILURE') {
-                    build job: 'updatemanifest', parameters: [string(name: 'DOCKERTAG', value: env.BUILD_NUMBER)]
-                }
+       
             }
         }
     }
