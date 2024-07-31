@@ -1,9 +1,9 @@
 pipeline {
     environment {
-        imagename = "ganeshpoloju/jenkinss"
+        imagename = "shashikumar023/jenkinss"
         dockerImage = ''
         containerName = 'my-container'
-        dockerHubCredentials = 'admin'
+        dockerHubCredentials = 'dockerdetais'
         dockerImageTag = "${imagename}:${env.BUILD_NUMBER}"
     }
 
